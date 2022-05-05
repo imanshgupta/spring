@@ -1,0 +1,47 @@
+package com.genpact.jdbc;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import javax.sql.DataSource;
+
+public class EmployeeDao implements Empdao {
+
+    private DataSource dataSource;
+	
+    public void setDataSource(DataSource dataSource) {
+        this.dataSource = dataSource;
+    }
+
+	public void saveEmp(Employee e) {
+		
+		   String sql = "INSERT INTO EMPLOYEE " +
+	                "(id,name,address) VALUES (?, ?, ?)";
+	        Connection conn = null;
+	        
+	        try {
+	        	conn = dataSource.getConnection();
+	            PreparedStatement ps = conn.prepareStatement(sql);
+	            ps.setInt(1, e.getId());
+	            ps.setString(2, e.getNameString());
+	            ps.setString(3, e.getAddressString());
+	            ps.executeUpdate();
+	            ps.close();
+
+	        } catch (SQLException e1) {
+	            throw new RuntimeException(e1);
+
+	        } finally {
+	            if (conn != null) {
+	                try {
+	                    conn.close();
+	                } catch (SQLException e1) {}
+	            }
+	        }
+		
+		
+	}
+	
+
+}

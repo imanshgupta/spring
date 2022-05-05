@@ -1,0 +1,22 @@
+package com.genpact.jdbc;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+public class EmployeeDao implements Empdao {
+
+	private JdbcTemplate jdbcTemplate;
+	
+	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate=jdbcTemplate;
+	}
+	
+	
+	public int saveEmp(Employee e) {
+		
+		String string="insert into employee values (?,?,?)";
+		
+		return jdbcTemplate.update(string,e.getId(),e.getNameString(),e.getAddressString());
+	}
+	
+
+}

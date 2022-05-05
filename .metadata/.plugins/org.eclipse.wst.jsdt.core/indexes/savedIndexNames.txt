@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+/Users/anshgupta/Desktop/untitled folder 2/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+235685849.index
+2446319343.index
+4169519217.index
+4142312500.index
+326170788.index
+4085363483.index

@@ -1,0 +1,8 @@
+package com.genpact.jdbc;
+
+public interface Empdao {
+
+	
+	public void saveEmp();
+	
+}

@@ -1,0 +1,21 @@
+package com.genpact.jdbc;
+
+import javax.sql.DataSource;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+public class EmployeeDao implements Empdao {
+
+    private DataSource dataSource;
+	
+	
+
+	public void saveEmp(Employee e) {
+		
+		
+		
+		
+	}
+	
+
+}

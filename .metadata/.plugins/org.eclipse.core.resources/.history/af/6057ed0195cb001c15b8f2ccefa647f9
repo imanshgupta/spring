@@ -1,0 +1,16 @@
+package com.gen.com.gen;
+
+public class Security implements Employee {
+	
+	public Security() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void doWork() {
+		// TODO Auto-generated method stub
+		System.out.println("KEeps the office clean");
+	}
+
+}

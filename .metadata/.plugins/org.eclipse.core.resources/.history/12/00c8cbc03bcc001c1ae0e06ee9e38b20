@@ -1,0 +1,5 @@
+package com.genpact.jdbc;
+
+public interface empdao {
+
+}
